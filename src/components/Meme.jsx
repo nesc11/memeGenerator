@@ -26,7 +26,7 @@ export default function Meme() {
     }
 
     const handleChange = (event) => {
-        const {name, value} = event.target
+        const { name, value } = event.target
         setMeme(prevMeme => {
             return {
                 ...prevMeme,
@@ -42,13 +42,13 @@ export default function Meme() {
             .then(res => res.json())
             .then(data => {
                 setAllMemes(data.data.memes)
-                getRandomMeme(data.data.memes) 
+                getRandomMeme(data.data.memes)
             })
     }, [])
 
     return (
-        <main>
-            <div>
+        <main className="main">
+            <div className="form">
                 <input
                     className="input"
                     type="text"
